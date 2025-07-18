@@ -1,0 +1,53 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+/* unvisited link */
+a:link {
+  color: #06326a;
+}
+
+/* visited link */
+a:visited {
+  color: #06326a;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: #06326a;
+}
+h1 {
+  color: #031b3a;
+  font-size: 30px;
+}
+h2 {
+  color: #031b3a;
+  font-size: 25px;
+}
+h3 {
+  color: #031b3a;
+  font-size: 20px;
+}
+h4 {
+  color: #031b3a;
+  font-size: 20px;
+}
+h5 {
+  color: #031b3a;
+  font-size: 20px;
+}

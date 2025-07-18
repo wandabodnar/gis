@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Introduction to GIS | Introduction to Geographic Information System</title>
+<meta name="author" content="Wanda Bodnar">
+<meta name="description" content="GIS is the abbreviation for geographic information system. It is a computer-based tool designed to collect, store, process, analyse, visualise and interpret spatially referenced data.  Components...">
+<meta name="generator" content="bookdown 0.43 with bs4_book()">
+<meta property="og:title" content="Introduction to GIS | Introduction to Geographic Information System">
+<meta property="og:type" content="book">
+<meta property="og:description" content="GIS is the abbreviation for geographic information system. It is a computer-based tool designed to collect, store, process, analyse, visualise and interpret spatially referenced data.  Components...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction to GIS | Introduction to Geographic Information System">
+<meta name="twitter:description" content="GIS is the abbreviation for geographic information system. It is a computer-based tool designed to collect, store, process, analyse, visualise and interpret spatially referenced data.  Components...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.1/jquery.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-binding-2.2.2/leaflet.js"></script><script src="libs/plotly-binding-4.11.0/plotly.js"></script><script src="libs/typedarray-0.1/typedarray.min.js"></script><link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script><link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script><link href="libs/colourpicker-lib-1.4/css/colourpicker.min.css" rel="stylesheet">
+<script src="libs/colourpicker-lib-1.4/js/colourpicker.min.js"></script><script src="libs/colourWidget-binding-1.3.0/colourWidget.js"></script><link href="libs/leaflet-minimap-3.3.1/Control.MiniMap.min.css" rel="stylesheet">
+<script src="libs/leaflet-minimap-3.3.1/Control.MiniMap.min.js"></script><script src="libs/leaflet-minimap-3.3.1/Minimap-binding.js"></script><script src="libs/leaflet-graticule-0.1.0/L.Graticule.js"></script><script src="libs/leaflet-graticule-0.1.0/Graticule-binding.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Introduction to Geographic Information System</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">About</a></li>
+<li><a class="" href="spatial-thinking-intelligence.html">Spatial Thinking &amp; Intelligence</a></li>
+<li><a class="" href="introduction-to-cartography.html">Introduction to Cartography</a></li>
+<li><a class="active" href="introduction-to-gis.html">Introduction to GIS</a></li>
+<li><a class="" href="introduction-to-coordinate-reference-system.html">Introduction to Coordinate Reference System</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://wandabodnar.github.io/gis">View book source <i class="fab fa-gitlab"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="introduction-to-gis" class="section level1 unnumbered">
+<h1>Introduction to GIS<a class="anchor" aria-label="anchor" href="#introduction-to-gis"><i class="fas fa-link"></i></a>
+</h1>
+<p>GIS is the abbreviation for <em>geographic information system</em>. It is a computer-based tool designed to collect,
+store, process, analyse, visualise and interpret spatially referenced data.</p>
+<center>
+<img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/booklet/main/Figures/GIS2.jpg" width="100%" height="auto">
+</center>
+<center>
+Components of Geographic Information System
+</center>
+<p><br></p>
+<p>GIS is a useful tool to help answer geographic questions and make decisions.</p>
+<p>For example, GIS can be used by climatologists to understand the causes and consequences of climate change, by political consultants to develop campaign strategies for elections or by epidemiologists to locate ground zero of a disease outbreak.</p>
+<center>
+<img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thameseels/main/workshops/GIS/img/gis1.png" width="100%" height="auto">
+</center>
+<center>
+COVID-19 Dashboard (Source: John Hopkins University)
+</center>
+<p><br></p>
+<div id="geographic-information" class="section level2 unnumbered">
+<h2>Geographic Information<a class="anchor" aria-label="anchor" href="#geographic-information"><i class="fas fa-link"></i></a>
+</h2>
+<p>In GIS geographic information is made up of spatial location data and attribute data.</p>
+<ul>
+<li><p>Spatial location data is data with geographic component. It answers the question <em>where something is</em>.</p></li>
+<li><p>Attribute data answers the question <em>what something is</em>.</p></li>
+</ul>
+<p>The database that contains these geographic information is called an <strong>attribute table</strong> and it can be used to symbolise features, make queries and to analyse the data.</p>
+<p>The example below shows a choropleth map of Internet users (per 100 people) in 2016 and its associated attribute table.</p>
+<center>
+<img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure1.jpg" width="100%" height="auto">
+</center>
+<center>
+World map of Internet users (per 100 people) in 2016
+</center>
+<p><br></p>
+<center>
+<img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure2.jpg" width="100%" height="auto">
+</center>
+<center>
+Screenshot of the associated attribute table
+</center>
+<p><br></p>
+</div>
+<div id="system" class="section level2 unnumbered">
+<h2>System<a class="anchor" aria-label="anchor" href="#system"><i class="fas fa-link"></i></a>
+</h2>
+<p>Made up of hardware and software, e.g. satellites, ArcGIS, QGIS.</p>
+</div>
+<div id="gis-capabilities" class="section level2 unnumbered">
+<h2>GIS capabilities<a class="anchor" aria-label="anchor" href="#gis-capabilities"><i class="fas fa-link"></i></a>
+</h2>
+<p>GIS has many capabilities. These are:</p>
+<ul>
+<li><p>Data processing: GIS can be used to view, create, edit, transform and display geospatial data.</p></li>
+<li><p>Spatial analysis: Different tools are used within GIS to identify trends, patterns and relationships in data. For example spatial analysis can be creating buffers, clipping features, network analysis, performing spatial statistics and so on.</p></li>
+<li><p>Map making: Map making helps spatially represent data from multiple sources (e.g. spreadsheets). This is the most common use of GIS.</p></li>
+<li><p>Imagery and remote sensing: This is used to extract information from imagery and remotely sensed data (e.g. satellites).</p></li>
+<li><p>Data collection and management: This can help to access, use, integrate and store data in a GIS.</p></li>
+</ul>
+</div>
+<div id="gis-data" class="section level2 unnumbered">
+<h2>GIS data<a class="anchor" aria-label="anchor" href="#gis-data"><i class="fas fa-link"></i></a>
+</h2>
+<div id="types" class="section level3 unnumbered">
+<h3>Types<a class="anchor" aria-label="anchor" href="#types"><i class="fas fa-link"></i></a>
+</h3>
+<p>Geographic information can be stored either as a vector data or a raster data.</p>
+<p><strong>Vector data</strong></p>
+<p>Vector (or feature) data is categorical data stored as geometrical shapes such as:</p>
+<ul>
+<li><p>Points: Points are single x,y coordinate locations.</p></li>
+<li><p>Lines: Lines are defined by two or more points that are connected with lines.</p></li>
+<li><p>Polygons: Polygons are defined by multiple points that are connected with lines and are closed.</p></li>
+</ul>
+<p>For example, geospatial data that show the location of buildings, rivers or ponds.</p>
+<center>
+<img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure3.jpg" width="350" height="auto"><img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure3a.jpg" width="350" height="auto">
+</center>
+<center>
+Vector types and vector data drawn on a map
+</center>
+<p><br></p>
+<p><strong>Raster data</strong></p>
+<p>Raster data is made up of a matrix of pixels, called cells, with each being the same size and containing a value that represents the conditions for the area covered by that cell. Raster data formats include JPEG (Joint Photographic Experts Group), BMP (Bitmap Image), PNG (Portable Network Graphics) and TIFF (Tagged Image File Format) files.</p>
+<center>
+<img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure4.jpg" width="100%" height="auto">
+</center>
+<center>
+Raster data
+</center>
+<p><br></p>
+<p>Raster data represents continuous data (integer or real values) like temperature or elevation.</p>
+<p>The example map below shows the average sea surface temperature on the 1st April in 2008.</p>
+<center>
+<img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure5.jpg" width="100%" height="auto">
+</center>
+<center>
+Sea surface temperature on 01/04/2008 (Source: Naval Oceanographic Office)
+</center>
+<p><br></p>
+<p><strong>Metadata</strong></p>
+<p>Here it also worth mentioning metadata which is essentially data about data. It provides additional information about the (geographic) data such purpose, who created it, scale, projection, attributes, its usage constraints and so on. The more detailed the metadata is, the easier for the user to interpret it and implement it.</p>
+</div>
+<div id="capture" class="section level3 unnumbered">
+<h3>Capture<a class="anchor" aria-label="anchor" href="#capture"><i class="fas fa-link"></i></a>
+</h3>
+<p>Primary data capture is a direct data acquisition methodology. Directly captured data can come from a global positioning system (GPS) or from remote sensing and surveying technologies. For example, data collected during field surveys, using satellite imaginary or Lidar.</p>
+<p><strong>Lidar</strong></p>
+<p>Lidar (Light Detection and Ranging) is a remote sensing method that uses light in the form of a pulsed laser to measure ranges to the Earth. These light pulses—combined with other data recorded can generate precise, three-dimensional information about the shape of the Earth and its surface characteristics. A lidar instrument principally consists of a laser, a scanner and a specialised GPS receiver.</p>
+<p>The two types of Lidar are:</p>
+<ul>
+<li><p>Topographic uses a near-infrared laser to map the land.</p></li>
+<li><p>Bathymetric uses water-penetrating green light to also measure seafloor and riverbed elevations.</p></li>
+</ul>
+<p>Secondary data capture is an indirect data acquisition methodology. For example, the use of existing geospatial data (e.g. through sites like <a href="https://nasa.github.io/data-nasa-gov-frontpage/" target="_blank">NASA</a> or <a href="https://www.ncdc.noaa.gov/data-access" target="_blank">NOAA</a>) available in both digital and hardcopy formats.</p>
+<p>A third way of data capture is digitization. This is used to create digital files from the original paper copy.</p>
+</div>
+<div id="format" class="section level3 unnumbered">
+<h3>Format<a class="anchor" aria-label="anchor" href="#format"><i class="fas fa-link"></i></a>
+</h3>
+<p>Vector and raster data can be stored and distributed in different formats.</p>
+<p><strong>Shapefile</strong></p>
+<p>Shapefile was first developed by Esri and it is the most widely known format for distributing geospatial vector data. A shapefile will always come in a .zip format containing the following files:</p>
+<ul>
+<li><p>.shp: Contains the geometry of each feature.</p></li>
+<li><p>.dbf: Contains the attribute data for all of the features in the dataset.</p></li>
+<li><p>.shx: Spatial index, it allows GIS systems to find features within the .shp file.</p></li>
+<li><p>.prj: Contains information about the projection and coordinate system the data uses.</p></li>
+<li><p>.cpg: This is an optional plain text file that describes the encoding applied to create the shapefile.</p></li>
+<li><p>.sbn and .sbx: These are also optional files that store the spatial index of the features.</p></li>
+<li><p>.qmd: Metadata stored by QGIS.</p></li>
+</ul>
+<p><strong>GeoJSON</strong></p>
+<p>GeoJSON is a JavaScript format used to store geospatial vector data. It consists from the following different parts:</p>
+<ul>
+<li><p>Geometry object: This is either the point, line, or polygon described earlier.</p></li>
+<li><p>Feature object: This is the geometry object and the associated random data.</p></li>
+<li><p>FeatureCollection: A list of feature objects.</p></li>
+</ul>
+<p>GeoJSON is widely used in web-based mapping (e.g. Leaflet or CartoDB) as this format is easy to handle and also “lighter” than a shapefile.</p>
+<p><strong>TopoJSON</strong></p>
+<p>TopoJSON is simply an extension of the GeoJSON format that encodes topology.</p>
+<p><strong>CSV, TXT, and GPX files</strong></p>
+<p>Spreadsheet data can be stored and used in different GIS software in a comma-separated values text file (.csv), a delimited text file (.txt) or GPS Exchange Format file (.gpx) format.</p>
+<p><strong>KML</strong></p>
+<p>KML (Keyhole Markup Language) is a file format used to display geographic data in an Earth browser such as Google Earth or ArcGIS Earth. KMZ files are the zipped versions KML files.</p>
+<p><strong>GeoTiff</strong></p>
+<p>GeoTiff has georeferenced information embedded within an image file.</p>
+<p><strong>NetCDF</strong></p>
+<p>NetCDF (Network Common Data Form) files are a standard for the exchange of scientific data in binary format. This is used for storing raster data in GIS.</p>
+<p><strong>API</strong></p>
+<p>It is also worth mentioning API (Application Programming Interface). API is a software intermediary that allows two applications to talk to each other. For example, a data layer stored on ArcGIS can be directly plugged into a map made in QGIS or other web-mapping software.
+In GIS, a data layer through API can be accessed via Web Mapping Service (WMS), Web Feature Service (WFS) or GeoJSON.</p>
+<div class="note">
+<p><strong><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Tip</strong>:</p>
+<p>Useful sites:</p>
+<ul>
+<li><p><a href="https://geojson-maps.ash.ms/" target="_blank">Build custom geojson</a> website for the creation of simplified GeoJSON regions.</p></li>
+<li><p><a href="https://geojson.io/#map=2/20.0/0.0" target="_blank">geojson.io</a> is a quick, simple tool for creating and viewing vector data.</p></li>
+<li><p><a href="https://mapshaper.org/" target="_blank">Mapshaper</a> can be used to edit Shapefile, GeoJSON, TopoJSON, CSV and several other data formats, written in JavaScript.</p></li>
+<li><p><a href="https://mygeodata.cloud/converter/" target="_blank">MyGeodata Converter</a> is an online GIS data conversion and transformation tool.</p></li>
+<li><p><a href="https://ogre.adc4gis.com/" target="_blank">Ogre</a> translates spatial files into GeoJSON.</p></li>
+</ul>
+</div>
+</div>
+<div id="quality" class="section level3 unnumbered">
+<h3>Quality<a class="anchor" aria-label="anchor" href="#quality"><i class="fas fa-link"></i></a>
+</h3>
+<p>Due to how geospatial data is collected, analysed and represented, uncertainties with data quality may arise. These errors are in fact expected as almost all representations of the world are incomplete.</p>
+<p>Two primary attributes that characterise data quality are precision and accuracy.</p>
+<p><strong>Precision</strong> refers to the fineness and exactness of the measurements, whilst <strong>accuracy</strong> is the difference between the recorded value and the true value.</p>
+<p>To understand the difference between precision and accuracy, consider the illustration below:</p>
+<center>
+<img src="https://raw.githubusercontent.com/ThamesEstuaryPartnership/thames-learn/main/Figures/figure6.jpg" width="500" height="auto">
+</center>
+<p><br></p>
+<p>When it comes to data quality in GIS, here are some of the things look out for:</p>
+<ul>
+<li><p>The completeness of the attribute table (Is there any data missing?)</p></li>
+<li><p>Temporal consistency (Is it up-to-date?)</p></li>
+<li><p>Location accuracy (Is the position of the feature correct?)</p></li>
+<li><p>Logical consistency (Is the data topologically correct?)</p></li>
+</ul>
+<p>Unfortunately, the more accurate and precise a geospatial data is, the higher cost is to obtain it and store it. This is because of the time and equipment used to collect the data. Larger data will also always require constant maintenance.</p>
+</div>
+<div id="finding-data" class="section level3 unnumbered">
+<h3>Finding data<a class="anchor" aria-label="anchor" href="#finding-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>In the age of information, the world wide web has large amount of data available. A quick Google search can normally help to find geospatial data. However, it is best to acquire data from trusted sources.</p>
+<ul>
+<li><p><a href="https://livingatlas.arcgis.com/en/home/" target="_blank">ArcGIS Living Atlas of the World</a>: This is a collection of geographic information from around the globe.</p></li>
+<li><p><a href="https://data.catchmentbasedapproach.org/" target="_blank">Cathcment Based Approach Data Hub</a>: GIS data package is a set of over 150 data layers, which is provided to CaBA catchment hosts in the UK.</p></li>
+<li><p><a href="https://scihub.copernicus.eu/dhus/#/home" target="_blank">Copernicus</a>: Copernicus is the European Union’s Earth observation programme.</p></li>
+<li><p><a href="https://environment.data.gov.uk/" target="_blank">Defra UK</a>: Defra Data Services Platform</p></li>
+<li><p><a href="https://emodnet.eu/en" target="_blank">EmodNet</a>: EmodNet is the gateway to marine data in Europe.</p></li>
+<li><p><a href="https://hub.arcgis.com/search" target="_blank">Esri Data Hub</a>: Esri houses over 250,000 open data sets from 5,000 organisations worldwide.</p></li>
+<li><p><a href="https://jncc.gov.uk/mpa-mapper/" target="_blank">JNCC Marine Protected Area (MPA) mapper</a>: This is an interactive resource containing information on the MPAs designated in UK and Crown Dependency waters.</p></li>
+<li><p><a href="https://koordinates.com/" target="_blank">Koordinates</a>: This is a geospatial data management platform.</p></li>
+<li><p><a href="https://magic.defra.gov.uk/home.htm" target="_blank">MAGIC</a>: The MAGIC website provides authoritative geographic information about the natural environment from across government.</p></li>
+<li><p><a href="https://www.marineregions.org/" target="_blank">Marine Regions</a>: This is a standard list of marine georeferenced place names and areas.</p></li>
+<li><p><a href="http://www.naturalearthdata.com/downloads/" target="_blank">Natural Earth Data</a>: This site houses key cultural and physical vector GIS datasets.</p></li>
+<li><p><a href="https://github.com/awesomedata/awesome-public-datasets" target="_blank">Public Datasets</a>: These are datasets collected and tidied from blogs, answers, and user responses.</p></li>
+<li><p><a href="https://terra.ipums.org/" target="_blank">Terra Populus</a>: Terra Populus holds population and environmental data.</p></li>
+<li><p><a href="https://github.com/andrea-ballatore/open-geo-data-education" target="_blank">Open Geospatial Datasets</a>: This is a repository of open geospatial datasets to be used in an educational context.</p></li>
+<li><p><a href="https://www.openstreetmap.org/#map=5/54.910/-3.432" target="_blank">OpenStreetMap</a>: OSM has some of the most detailed information on our planet.</p></li>
+</ul>
+<p>Apart from these, there are many governmental and non-profit platforms that offer free access to geospatial data.</p>
+</div>
+</div>
+<div id="gis-software" class="section level2 unnumbered">
+<h2>GIS software<a class="anchor" aria-label="anchor" href="#gis-software"><i class="fas fa-link"></i></a>
+</h2>
+<p>There are a number of open-source (software that is freely available for use) and commercial GIS software available. Here are some of the most well-known (both desktop and web-based):</p>
+<ul>
+<li><p><a href="https://carto.com/" target="_blank">Carto</a></p></li>
+<li><p><a href="https://www.esri.com/en-us/arcgis/products/index" target="_blank">Esri</a></p></li>
+<li><p><a href="https://d3js.org/" target="_blank">D3.js</a></p></li>
+<li><p><a href="https://flowmap.blue/" target="_blank">Flowmap.blue</a></p></li>
+<li><p><a href="https://flourish.studio/" target="_blank">Flourish</a></p></li>
+<li><p><a href="https://earth.google.com/web/" target="_blank">GoogleEarth</a></p></li>
+<li><p><a href="https://leafletjs.com/" target="_blank">Leafletjs</a></p></li>
+<li><p><a href="https://mangomap.com/" target="_blank">Mango</a></p></li>
+<li><p><a href="https://www.mapbox.com/" target="_blank">Mapbox</a></p></li>
+<li><p><a href="https://www.precisely.com/product/precisely-mapinfo/mapinfo-pro" target="_blank">MapInfo Pro</a></p></li>
+<li><p><a href="https://mapnik.org/" target="_blank">Mapnik</a></p></li>
+<li><p><a href="https://www.qgis.org/en/site/" target="_blank">QGIS</a></p></li>
+<li><p><a href="https://rstudio.com/" target="_blank">R Studio</a></p></li>
+<li><p><a href="https://www.tableau.com/en-gb" target="_blank">Tableau</a></p></li>
+</ul>
+</div>
+<div id="summary-1" class="section level2 unnumbered">
+<h2>Summary<a class="anchor" aria-label="anchor" href="#summary-1"><i class="fas fa-link"></i></a>
+</h2>
+<div class="note">
+<p><strong><i class="fa fa-edit fa-2x"></i></strong></p>
+<ul>
+<li><p>GIS is the abbreviation for geographic information system. It is a computer system used to create, manage, visualise, analyse and interpret spatially referenced data.</p></li>
+<li><p>GIS is used to answer geographic questions and make decisions based on geospatial data.</p></li>
+<li><p>Geographic information is made up of spatial location data <em>(where something is)</em> and attribute data <em>(what something is)</em>.</p></li>
+<li><p>GIS can be used for geospatial data processing, spatial analysis, map making, imagery and remote sensing, and data collection and management.</p></li>
+<li><p>GIS data can either be vector or raster data.</p></li>
+<li><p>The quality of geospatial data will depend on the time spent and the equipment used to collect it. However, almost all representations of the world are incomplete.</p></li>
+<li><p>Nowadays there are many Internet platforms that offer open-access geospatial data.</p></li>
+</ul>
+</div>
+<hr>
+</div>
+<div id="reference-resources-2" class="section level2 unnumbered">
+<h2>Reference resources<a class="anchor" aria-label="anchor" href="#reference-resources-2"><i class="fas fa-link"></i></a>
+</h2>
+<div id="books-1" class="section level3 unnumbered">
+<h3>Books<a class="anchor" aria-label="anchor" href="#books-1"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><a href="http://gisinecology.com/an-introduction-to-using-gis-in-marine-biology-2nd-edition/" target="_blank">An Introduction To Using GIS In Marine Biology (2nd Edition)</a></li>
+<li><a href="https://resources.saylor.org/wwwresources/archived/site/textbooks/Essentials%20of%20Geographic%20Information%20Systems.pdf" target="_blank">Essentials of Geographic Information Systems</a></li>
+<li><a href="https://books.google.co.uk/books/about/Geographic_Information_Systems_Demystifi.html?id=TPgsAQAAMAAJ&amp;redir_esc=y" target="_blank">Geographic Information Systems Demystified</a></li>
+<li><a href="https://www.wiley.com/en-gb/Geographic+Information+Science+and+Systems%2C+4th+Edition-p-9781119031307" target="_blank">Geographic Information Science and Systems</a></li>
+<li><a href="https://webapps.itc.utwente.nl/librarywww/papers_2009/general/principlesgis.pdf" target="_blank">Principles of Geographic Information Systems</a></li>
+</ul>
+</div>
+<div id="free-courses-and-tutorials-2" class="section level3 unnumbered">
+<h3>Free courses and tutorials<a class="anchor" aria-label="anchor" href="#free-courses-and-tutorials-2"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><a href="https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/index.html" target="_blank">A Gentle Introduction to GIS</a></li>
+<li><a href="http://ecospatial.info/" target="_blank">EcoSpatial e-Learning</a></li>
+<li><a href="https://www.esri.com/training/catalog/57630434851d31e02a43ef28/getting-started-with-gis/" target="_blank">Getting started with GIS</a></li>
+<li><a href="https://www.esri.com/training/catalog/5d9cd7de5edc347a71611ccc/gis-basics/" target="_blank">GIS Basics</a></li>
+<li><a href="https://ocw.mit.edu/resources/res-str-001-geographic-information-system-gis-tutorial-january-iap-2016/introduction-to-gis/" target="_blank">Introduction to GIS</a></li>
+<li><a href="https://classroom.oceanteacher.org/tag/index.php?tc=1&amp;tag=Marine%20Spatial%20Planning&amp;ta=2&amp;excl=1" target="_blank">Marine Spatial Planning</a></li>
+<li><a href="https://www.e-education.psu.edu/natureofgeoinfo/node/1672" target="_blank">The Nature of Geographic Information</a></li>
+</ul>
+</div>
+<div id="paid-courses-and-tutorials-1" class="section level3 unnumbered">
+<h3>Paid courses and tutorials<a class="anchor" aria-label="anchor" href="#paid-courses-and-tutorials-1"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><a href="https://www.coursera.org/specializations/gis" target="_blank">Geographic Information Systems (GIS) Specialization</a></li>
+<li><a href="https://www.coursera.org/specializations/gis-mapping-spatial-analysis" target="_blank">GIS, Mapping, and Spatial Analysis Specialization</a></li>
+<li><a href="https://www.conted.ox.ac.uk/courses/introducing-mapping-spatial-data-and-gis-online/" target="_blank">Introducing Mapping, Spatial Data and GIS</a></li>
+</ul>
+</div>
+<div id="other-2" class="section level3 unnumbered">
+<h3>Other<a class="anchor" aria-label="anchor" href="#other-2"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><a href="https://www.geospatialrevolution.psu.edu/" target="_blank">Geospatial Revolution</a></li>
+<li><a href="https://support.esri.com/en/other-resources/gis-dictionary" target="_blank">GIS Dictionary</a></li>
+<li><a href="https://oceanservice.noaa.gov/facts/lidar.html#:~:text=Lidar%2C%20which%20stands%20for%20Light,variable%20distances%20to%20the%20Earth" target="_blank">What is lidar?</a></li>
+</ul>
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="introduction-to-cartography.html">Introduction to Cartography</a></div>
+<div class="next"><a href="introduction-to-coordinate-reference-system.html">Introduction to Coordinate Reference System</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#introduction-to-gis">Introduction to GIS</a></li>
+<li><a class="nav-link" href="#geographic-information">Geographic Information</a></li>
+<li><a class="nav-link" href="#system">System</a></li>
+<li><a class="nav-link" href="#gis-capabilities">GIS capabilities</a></li>
+<li>
+<a class="nav-link" href="#gis-data">GIS data</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#types">Types</a></li>
+<li><a class="nav-link" href="#capture">Capture</a></li>
+<li><a class="nav-link" href="#format">Format</a></li>
+<li><a class="nav-link" href="#quality">Quality</a></li>
+<li><a class="nav-link" href="#finding-data">Finding data</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#gis-software">GIS software</a></li>
+<li><a class="nav-link" href="#summary-1">Summary</a></li>
+<li>
+<a class="nav-link" href="#reference-resources-2">Reference resources</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#books-1">Books</a></li>
+<li><a class="nav-link" href="#free-courses-and-tutorials-2">Free courses and tutorials</a></li>
+<li><a class="nav-link" href="#paid-courses-and-tutorials-1">Paid courses and tutorials</a></li>
+<li><a class="nav-link" href="#other-2">Other</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://wandabodnar.github.io/gis/blob/master/03-intro-to-GIS.Rmd">View source <i class="fab fa-gitlab"></i></a></li>
+          <li><a id="book-edit" href="https://wandabodnar.github.io/gis/edit/master/03-intro-to-GIS.Rmd">Edit this page <i class="fab fa-gitlab"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Introduction to Geographic Information System</strong>" was written by Wanda Bodnar. It was last built on 2025-07-18.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
