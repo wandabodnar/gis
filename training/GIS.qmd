@@ -1,0 +1,141 @@
+---
+title: "From spatial data to published interactive maps using R Studio"
+author: Wanda Bodnar
+format:
+  revealjs:
+    theme: [white]
+    highlight-style: github
+    slide-number: true
+    chalkboard: true
+    incremental: true
+    preview-links: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Day plan
+
+::: nonincremental
+-   Pre-session preparation
+-   10.00 – 11.00: Session 1 — Creating and loading spatial data
+-   11.00 – 12.00: Session 2 — Publication-ready static maps
+-   12.00 – 13.00: Lunch
+-   13.00 – 14.00: Session 3 — Interactive maps and mixed data sources
+-   14.00 – 15.00: Session 4 — Publishing maps online
+:::
+
+## Pre-session preparation
+
+::: nonincremental
+-   Installing R and RStudio
+
+    -   Source: <https://posit.co/download/rstudio-desktop/>
+
+    -   **Install R first**, then **RStudio**
+
+-   Installing required packages
+
+    `install.packages(c(...))`
+:::
+
+## Pre-session preparation
+
+::: nonincremental
+-   Setting up a GitHub account
+
+    -   Create a free account: <https://github.com/>
+    -   Link with R Studio
+    -   Using Copilot
+        -   Tools → Global Options → Copilot
+:::
+
+## Session 1 — Creating and loading spatial data
+
+::: nonincremental
+-   Creating spatial data
+
+    ::: nonincremental
+    -   Go to <https://geojson.io>
+        -   Create points, lines, polygons
+    -   Export
+        -   `.geojson` (best for web)
+        -   `.csv` (lon/lat table)
+        -   `.shp` (legacy GIS format)
+    :::
+:::
+
+## Session 1 — Creating and loading spatial data
+
+::: nonincremental
+-   Creating spatial data
+
+    ::: nonincremental
+    -   Loading spatial data into R
+
+        -   sf objects
+
+        -   Quick visual checks
+    :::
+:::
+
+## Session 1 — Creating and loading spatial data
+
+::: nonincremental
+-   Creating spatial data
+
+    ::: nonincremental
+    -   Brief introduction to CRS
+
+        -   Why web maps need WGS84
+
+        -   What goes wrong if CRSs don’t match
+    :::
+:::
+
+## Session 2 — Publication-ready static maps
+
+::: nonincremental
+-   Mapping with `ggplot2` + `geom_sf()`
+
+-   Colour scales and legends that work
+
+-   Map sizing and export for publication
+
+-   Saving figures at appropriate resolution
+
+-   Bonus: conceptually turning static maps into interactive one
+:::
+
+# Lunch break
+
+## Session 3 — Interactive maps and mixed data sources
+
+::: nonincremental
+-   Creating a basic Leaflet map
+
+    -   Markers, colours, popups, hover info
+
+-   Loading spatial data
+
+    -   ArcGIS Online Feature Layers
+
+-   Working with mixed CRSs
+
+    -   National Grid vs WGS84
+
+    -   Safe transformation for web mapping
+
+-   Building a fully functional interactive map
+:::
+
+## Session 4 — Publishing maps online
+
+::: nonincremental
+-   GitHub basics for publishing
+-   Creating a simple R Markdown / Quarto page
+-   Embedding the interactive map
+-   Publishing via GitHub Pages
+-   Sharing the live URL
+:::
