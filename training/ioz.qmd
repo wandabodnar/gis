@@ -19,7 +19,7 @@ execute:
   message: false
 ---
 
-## Day plan
+## 📅 Day plan
 
 ::: nonincremental
 -   Pre-session preparation
@@ -30,7 +30,7 @@ execute:
 -   14.00 – 15.00: Session 4 — Publishing maps online
 :::
 
-## Pre-session preparation
+## 📝 Pre-session preparation
 
 ::: nonincremental
 -   Installing R and RStudio
@@ -44,7 +44,7 @@ execute:
     `install.packages(c(...))`
 :::
 
-## Pre-session preparation
+## 📝 Pre-session preparation
 
 ::: nonincremental
 -   Setting up a GitHub account
@@ -55,7 +55,7 @@ execute:
         -   Tools → Global Options → Copilot
 :::
 
-## Session 1 — Creating and loading spatial data
+## 📍 Session 1 — Creating and loading spatial data
 
 ::: nonincremental
 -   Creating spatial data
@@ -70,7 +70,7 @@ execute:
     :::
 :::
 
-## Session 1 — Creating and loading spatial data
+## 📍 Session 1 — Creating and loading spatial data
 
 ::: nonincremental
 -   Creating spatial data
@@ -84,7 +84,7 @@ execute:
     :::
 :::
 
-## Session 1 — Creating and loading spatial data
+## 📍 Session 1 — Creating and loading spatial data
 
 ::: nonincremental
 -   Creating spatial data
@@ -98,7 +98,7 @@ execute:
     :::
 :::
 
-## Session 2 — Publication-ready static maps
+## 🗺️ Session 2 — Publication-ready static maps
 
 ::: nonincremental
 -   Mapping with `ggplot2` + `geom_sf()`
@@ -112,9 +112,9 @@ execute:
 -   Bonus: conceptually turning static maps into interactive one
 :::
 
-# Lunch break
+# 🥪 Lunch break
 
-## Session 3 — Interactive maps and mixed data sources
+## 🗺️ Session 3 — Interactive maps and mixed data sources
 
 ::: nonincremental
 -   Creating a basic Leaflet map
@@ -134,7 +134,7 @@ execute:
 -   Building a fully functional interactive map
 :::
 
-## Session 4 — Publishing maps online
+## 🔗 Session 4 — Publishing maps online
 
 ::: nonincremental
 -   GitHub basics for publishing
