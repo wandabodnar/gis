@@ -6,9 +6,13 @@ format:
     theme: [white]
     highlight-style: github
     slide-number: true
-    chalkboard: true
     incremental: true
     preview-links: true
+    controls: true
+    progress: true        
+    menu: false            
+    navigation-mode: linear
+    self-contained: true
 execute:
   echo: true
   warning: false
@@ -21,7 +25,7 @@ execute:
 -   Pre-session preparation
 -   10.00 – 11.00: Session 1 — Creating and loading spatial data
 -   11.00 – 12.00: Session 2 — Publication-ready static maps
--   12.00 – 13.00: Lunch
+-   12.00 – 13.00: Lunch break
 -   13.00 – 14.00: Session 3 — Interactive maps and mixed data sources
 -   14.00 – 15.00: Session 4 — Publishing maps online
 :::
