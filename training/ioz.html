@@ -1016,9 +1016,21 @@ Wanda Bodnar
 <li><p>Source: <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p></li>
 <li><p><strong>Install R first</strong>, then <strong>RStudio</strong></p></li>
 </ul></li>
-<li><p>Installing required packages</p>
-<p><code>install.packages(c(...))</code></p></li>
+<li><p>Installing required packages</p></li>
 </ul>
+<aside class="notes">
+<p>Ensure that R, RStudio and the required packages are installed before the session.</p>
+<style type="text/css">
+span.MJX_Assistive_MathML {
+position:absolute!important;
+clip: rect(1px, 1px, 1px, 1px);
+padding: 1px 0 0 0!important;
+border: 0!important;
+height: 1px!important;
+width: 1px!important;
+overflow: hidden!important;
+display:block!important;
+}</style></aside>
 </section>
 <section id="pre-session-preparation-1" class="slide level2">
 <h2>📝 Pre-session preparation</h2>
@@ -1037,55 +1049,19 @@ Wanda Bodnar
 <section id="session-1-creating-and-loading-spatial-data" class="slide level2">
 <h2>📍 Session 1 — Creating and loading spatial data</h2>
 <ul>
-<li><p>Creating spatial data</p>
-<ul>
-<li>Go to <a href="https://geojson.io" class="uri">https://geojson.io</a>
-<ul>
-<li>Create points, lines, polygons</li>
-</ul></li>
-<li>Export
-<ul>
-<li><code>.geojson</code> (best for web)</li>
-<li><code>.csv</code> (lon/lat table)</li>
-<li><code>.shp</code> (legacy GIS format)</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="session-1-creating-and-loading-spatial-data-1" class="slide level2">
-<h2>📍 Session 1 — Creating and loading spatial data</h2>
-<ul>
-<li><p>Creating spatial data</p>
-<ul>
-<li><p>Loading spatial data into R</p>
-<ul>
-<li><p>sf objects</p></li>
-<li><p>Quick visual checks</p></li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="session-1-creating-and-loading-spatial-data-2" class="slide level2">
-<h2>📍 Session 1 — Creating and loading spatial data</h2>
-<ul>
-<li><p>Creating spatial data</p>
-<ul>
-<li><p>Brief introduction to CRS</p>
-<ul>
-<li><p>Why web maps need WGS84</p></li>
-<li><p>What goes wrong if CRSs don’t match</p></li>
-</ul></li>
-</ul></li>
+<li><p>Creating spatial data using <a href="https://geojson.io/" class="uri">https://geojson.io/</a></p></li>
+<li><p>Loading spatial data into R</p></li>
+<li><p>Brief introduction to CRS</p></li>
 </ul>
 </section>
 <section id="session-2-publication-ready-static-maps" class="slide level2">
 <h2>🗺️ Session 2 — Publication-ready static maps</h2>
 <ul>
-<li><p>Mapping with <code>ggplot2</code> + <code>geom_sf()</code></p></li>
-<li><p>Colour scales and legends that work</p></li>
-<li><p>Map sizing and export for publication</p></li>
-<li><p>Saving figures at appropriate resolution</p></li>
-<li><p>Bonus: conceptually turning static maps into interactive one</p></li>
+<li>Mapping with <code>ggplot2</code> + <code>geom_sf()</code></li>
+<li>Colour scales and legends that work</li>
+<li>Map sizing and export for publication</li>
+<li>Saving figures at appropriate resolution</li>
+<li>Bonus: conceptually turning static maps into interactive one</li>
 </ul>
 </section>
 <section>
@@ -1096,20 +1072,10 @@ Wanda Bodnar
 <section id="session-3-interactive-maps-and-mixed-data-sources" class="slide level2">
 <h2>🗺️ Session 3 — Interactive maps and mixed data sources</h2>
 <ul>
-<li><p>Creating a basic Leaflet map</p>
-<ul>
-<li>Markers, colours, popups, hover info</li>
-</ul></li>
-<li><p>Loading spatial data</p>
-<ul>
-<li>ArcGIS Online Feature Layers</li>
-</ul></li>
-<li><p>Working with mixed CRSs</p>
-<ul>
-<li><p>National Grid vs WGS84</p></li>
-<li><p>Safe transformation for web mapping</p></li>
-</ul></li>
-<li><p>Building a fully functional interactive map</p></li>
+<li>Creating a basic Leaflet map</li>
+<li>Loading spatial data</li>
+<li>Working with mixed CRSs</li>
+<li>Building a fully functional interactive map</li>
 </ul>
 </section>
 <section id="session-4-publishing-maps-online" class="slide level2">

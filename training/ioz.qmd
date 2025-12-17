@@ -10,7 +10,7 @@ format:
     preview-links: true
     controls: true
     progress: true        
-    menu: false            
+    menu: false          
     navigation-mode: linear
     self-contained: true
 execute:
@@ -40,8 +40,10 @@ execute:
     -   **Install R first**, then **RStudio**
 
 -   Installing required packages
+:::
 
-    `install.packages(c(...))`
+::: notes
+Ensure that R, RStudio and the required packages are installed before the session.
 :::
 
 ## 📝 Pre-session preparation
@@ -58,57 +60,20 @@ execute:
 ## 📍 Session 1 — Creating and loading spatial data
 
 ::: nonincremental
--   Creating spatial data
+-   Creating spatial data using <https://geojson.io/>
 
-    ::: nonincremental
-    -   Go to <https://geojson.io>
-        -   Create points, lines, polygons
-    -   Export
-        -   `.geojson` (best for web)
-        -   `.csv` (lon/lat table)
-        -   `.shp` (legacy GIS format)
-    :::
-:::
+-   Loading spatial data into R
 
-## 📍 Session 1 — Creating and loading spatial data
-
-::: nonincremental
--   Creating spatial data
-
-    ::: nonincremental
-    -   Loading spatial data into R
-
-        -   sf objects
-
-        -   Quick visual checks
-    :::
-:::
-
-## 📍 Session 1 — Creating and loading spatial data
-
-::: nonincremental
--   Creating spatial data
-
-    ::: nonincremental
-    -   Brief introduction to CRS
-
-        -   Why web maps need WGS84
-
-        -   What goes wrong if CRSs don’t match
-    :::
+-   Brief introduction to CRS
 :::
 
 ## 🗺️ Session 2 — Publication-ready static maps
 
 ::: nonincremental
 -   Mapping with `ggplot2` + `geom_sf()`
-
 -   Colour scales and legends that work
-
 -   Map sizing and export for publication
-
 -   Saving figures at appropriate resolution
-
 -   Bonus: conceptually turning static maps into interactive one
 :::
 
@@ -118,19 +83,8 @@ execute:
 
 ::: nonincremental
 -   Creating a basic Leaflet map
-
-    -   Markers, colours, popups, hover info
-
 -   Loading spatial data
-
-    -   ArcGIS Online Feature Layers
-
 -   Working with mixed CRSs
-
-    -   National Grid vs WGS84
-
-    -   Safe transformation for web mapping
-
 -   Building a fully functional interactive map
 :::
 
