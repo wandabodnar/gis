@@ -40,10 +40,8 @@ execute:
     -   **Install R first**, then **RStudio**
 
 -   Installing required packages
-:::
 
-::: notes
-Ensure that R, RStudio and the required packages are installed before the session.
+    -   *TBA...*
 :::
 
 ## 📝 Pre-session preparation
@@ -73,8 +71,7 @@ Ensure that R, RStudio and the required packages are installed before the sessio
 -   Mapping with `ggplot2` + `geom_sf()`
 -   Colour scales and legends that work
 -   Map sizing and export for publication
--   Saving figures at appropriate resolution
--   Bonus: conceptually turning static maps into interactive one
+-   *Bonus: conceptually turning static maps into interactive one*
 :::
 
 # 🥪 Lunch break
@@ -83,8 +80,13 @@ Ensure that R, RStudio and the required packages are installed before the sessio
 
 ::: nonincremental
 -   Creating a basic Leaflet map
+
 -   Loading spatial data
+
+    -   From desktop and online feature service
+
 -   Working with mixed CRSs
+
 -   Building a fully functional interactive map
 :::
 
