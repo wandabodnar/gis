@@ -60,7 +60,7 @@ execute:
 ::: nonincremental
 -   Creating spatial data using <https://geojson.io/>
 
--   Loading spatial data into R
+-   Loading spatial data
 
 -   Brief introduction to CRS
 :::
@@ -80,14 +80,9 @@ execute:
 
 ::: nonincremental
 -   Creating a basic Leaflet map
-
--   Loading spatial data
-
-    -   From desktop and online feature service
-
--   Working with mixed CRSs
-
--   Building a fully functional interactive map
+-   Working with spatial data from local files and web services
+-   Handling mixed coordinate reference systems (CRSs)
+-   Building a fully functional interactive web map
 :::
 
 ## 🔗 Session 4 — Publishing maps online
